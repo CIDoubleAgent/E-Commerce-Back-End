@@ -23,7 +23,7 @@ router.get('/:id', async (req, res) => {
   let data = await Product.findOne({
     where: {id: req.params.id},
     include: [
-      {model: Category, attributes: ['category_name'], required: true},
+      {model: Category, attributes: ['id', 'category_name'], required: true},
       {model: Tag, attributes: ['id', 'tag_name']}
     ]
   });
