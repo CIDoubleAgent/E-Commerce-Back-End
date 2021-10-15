@@ -34,10 +34,24 @@ router.post('/', (req, res) => {
     }
   */
  Category.create(req.body)
+ .then(function () {
+   res.json(req.body)
+  }).catch((err) => {
+    console.log(err);
+    res.status(400).json(err);
+  });
 });
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
+  Category.update(req.body, {
+    where: {
+      id: req.params.id,
+    },
+  })
+  .then(function (category) {
+    res.json(category);
+  })
 });
 
 router.delete('/:id', async (req, res) => {
