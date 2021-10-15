@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
   let data = await Product.findAll({
     include: [
       {model: Category, attributes: ['category_name'], required: true},
-      {model: Tag, attributes: ['tag_name']}
+      {model: Tag, attributes: ['id', 'tag_name']}
     ]
   });
   res.json(data);
@@ -22,9 +22,12 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Category and Tag data
   let data = await Product.findOne({
     where: {id: req.params.id},
-    attributes: ['id', 'product_name', 'price', 'stock']
+    include: [
+      {model: Category, attributes: ['category_name'], required: true},
+      {model: Tag, attributes: ['id', 'tag_name']}
+    ]
   });
-  res.send(data);
+  res.json(data);
 });
 
 // create new product
