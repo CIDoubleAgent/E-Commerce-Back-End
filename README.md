@@ -5,14 +5,17 @@ This is a command line app that keeps track of inventory for an e commerce shop.
 ## Table of contents
 * [Installation](#installation)
 * [Usage](#usage)
+* [Demo Link](#demo-link)
 * [How to Contribute](#how-to-contribute)
 * [Tests](#tests)
 * [Liscense](#liscense)
 * [Questions](#questions)
 ## Installation
-Install node.js and required dependencies found in package.json, create .env file per instructions in demo video, then run "npm start" in node.js command line.
+Install node.js and required dependencies found in package.json, create a .env with your mysql username(DB_USER=), password(DB_PW=), and database name (DB_NAME='ecommerce_db'). Use the "schema" file in the "db" folder to create the database. Then navigate to the root repo folder in node.js command line and run npm seed to seed the database, then run "npm start" in node.js command line to start the app.
 ## Usage
 After running the start command in the root file of the repo, the user will be prompted as to what they would like to do. Select the desired option, follow the prompts, and the desired change will be made or the desired data will be made viewable depending on your selection.
+## Demo Link
+
 ## How to contribute
 Contact me using the "Questions" section of this readme.
 ## Tests
