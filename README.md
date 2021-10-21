@@ -2,6 +2,8 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## Description
 This is a command line app that keeps track of inventory for an e commerce shop. The app will take data input by the user and store it to a local database, which can then be modified using the appropriate routes. Users can view, update and delete categories, products and tags. Categories can have many products, products have a single category. products can have many tags.
+## Links
+* Demo Video: https://youtu.be/2jWKaTxYyyg
 ## Table of contents
 * [Installation](#installation)
 * [Usage](#usage)

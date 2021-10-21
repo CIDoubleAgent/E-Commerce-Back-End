@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
   let data = await Tag.findOne({
     where: {id: req.params.id},
     include: [
-      {model: Product, attributes: ['id', 'product_name', 'price', 'stock', 'category_id'], required: true}
+      {model: Product, attributes: ['id', 'product_name', 'price', 'stock', 'category_id']}
     ]
   });
   res.json(data);
